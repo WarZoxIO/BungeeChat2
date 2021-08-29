@@ -26,7 +26,7 @@ public class GlobalChatListener implements Listener {
   private final Config staffChatSymbolSection =
       BungeecordModuleManager.STAFF_CHAT_MODULE.getModuleSection().getConfig("symbol");
 
-  @EventHandler(priority = EventPriority.HIGH)
+  @EventHandler
   public void onPlayerChat(ChatEvent e) {
     if (e.isCancelled()) return;
     if (!(e.getSender() instanceof ProxiedPlayer)) return;
